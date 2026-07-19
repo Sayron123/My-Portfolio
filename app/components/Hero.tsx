@@ -44,15 +44,13 @@ export default function Hero() {
               >
                 View Projects
               </a>
-              <button >
-                <a href="/resume/Pabilando_resume.pdf"
+                <a href="/Pabilando_resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-xl border border-neutral-200 bg-white px-5 py-3 text-sm font-medium text-black dark:border-neutral-700 dark:bg-neutral-900 dark:text-white"
                 >
                   View Resume
-                </a>
-              </button>
+                </a>          
             </div>
           </div>
         </div>
