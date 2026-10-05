@@ -17,6 +17,8 @@ import {
     type MotionValue,
 } from "framer-motion"
 
+import HoverVideo from "../HoverVids";
+
 /**
  * CoverflowCarousel — a flat-slat "cover flow" gallery.
  *
@@ -40,6 +42,7 @@ type CoverflowImage = {
     src?: any
     srcUrl?: string
     alt?: string
+    video?:string
 }
 
 type Props = {
@@ -205,6 +208,7 @@ function Card({
 
     return (
         <motion.div
+            className="slat"
             onClick={onSelect ? () => onSelect(index) : undefined}
             style={{
                 position: "absolute",
@@ -227,22 +231,24 @@ function Card({
                     boxShadow,
                 }}
             >
-                {src ? (
-                    <img
-                        src={src}
-                        srcSet={srcSet}
-                        alt={item?.alt || ""}
-                        draggable={false}
-                        style={{
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "cover",
-                            display: "block",
-                            pointerEvents: "none",
-                            userSelect: "none",
-                        }}
-                    />
-                ) : null}
+            {item?.video ? (
+                <HoverVideo src={item.video} poster={src} />
+            ) : src ? (
+                <img
+                    src={src}
+                    srcSet={srcSet}
+                    alt={item?.alt || ""}
+                    draggable={false}
+                    style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        display: "block",
+                        pointerEvents: "none",
+                        userSelect: "none",
+                    }}
+                />
+            ) : null}
             </motion.div>
         </motion.div>
     )

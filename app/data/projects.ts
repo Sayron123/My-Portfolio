@@ -9,6 +9,8 @@ export interface Project {
     liveUrl?: string;
     repoUrl?: string;
     featured?: boolean;
+    video?: string;
+    poster?: string;
 }
 
 export const projects: Project[] = [
@@ -18,7 +20,9 @@ export const projects: Project[] = [
     description: "A comic-reading platform with series management, chapter uploads, and an admin dashboard. Currently on hold pre-launch.",
     image: "/images/placeholder.webp",
     techstack: ["Next.js", "Supabase", "Cloudflare", "Tailwind CSS"],
-    repoUrl: "https://github.com/Sayron123/ryuwanshoy",
+    repoUrl: "https://github.com/websitecrl/ryuwanshoy",
+    video: "/videos/ryuwanshoy-captioned.mp4",
+    poster: "/images/placeholder.webp"
   },
   {
     slug: "stub",
@@ -36,4 +40,16 @@ export const projects: Project[] = [
     techstack: ["C++"],
     repoUrl: "https://github.com/Sayron123/guardner",
   },
+  {
+    slug: "ticketlens",
+    title: "TicketLens",
+    description: "IBM Bob custom mode that turns vague client tickets into verified code changes in unfamiliar codebases. Built solo for the IBM Bob 2.0 Hackathon.",
+    image: "/images/ticketlens.webp",
+    techstack: ["IBM Bob", "Mermaid"],
+    repoUrl: "https://github.com/Sayron123/bob-first-day",
+    video: "/videos/ticketlens.mp4",
+    poster: "/images/ticketlens.webp"
+  },
+
+
 ];

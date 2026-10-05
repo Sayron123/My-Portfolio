@@ -1,4 +1,6 @@
-import { SiNextdotjs, SiSupabase, SiCloudflare, SiTailwindcss, SiFastapi, SiVuedotjs, SiMongodb, SiJsonwebtokens, SiCplusplus, } from "react-icons/si";
+import { SiNextdotjs, SiSupabase, SiCloudflare, SiTailwindcss, SiFastapi, 
+  SiVuedotjs, SiMongodb, SiJsonwebtokens, SiCplusplus, SiMermaid, } from "react-icons/si";
+import { Bot } from "lucide-react"
 
 export const techIcons = {
   "Next.js": SiNextdotjs,
@@ -10,6 +12,8 @@ export const techIcons = {
   "MongoDB": SiMongodb,
   "JWT": SiJsonwebtokens,
   "C++": SiCplusplus,
+  "IBM Bob": Bot,
+  "Mermaid": SiMermaid,
 } as const;
 
 export type TechName = keyof typeof techIcons;

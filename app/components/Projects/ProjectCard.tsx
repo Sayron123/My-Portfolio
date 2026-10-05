@@ -1,5 +1,6 @@
 import { Project } from "@/app/data/projects";
 import { techIcons } from "@/app/data/techIcons";
+import HoverVideo from "../HoverVids";
 
 interface ProjectCardProps {
     project: Project;
@@ -10,7 +11,19 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div className="flex flex-col rounded-lg border border-gray-200 dark:border-gray-800 overflow-hidden p-4 gap-3">
             <h3 className="text-lg font-semibold">{project.title}</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-                {project.description}
+                {project.video && project.poster ? (
+                    <div className="aspect-video w-full">
+                        <HoverVideo src={project.video} poster={project.poster} />
+                    </div>
+                ) : (
+                    project.image && (
+                        <img
+                            src={project.image}
+                            alt={project.title}
+                            className="aspect-video w-full rounded-2xl object-cover"
+                        />
+                    )
+                )}
             </p>
 
             {/* Tech Stack */}

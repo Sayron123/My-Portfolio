@@ -21,7 +21,7 @@ function useBreakpoint() {
 const SIZES = {
   sm: { activeWidth: 300, activeHeight: 200, restWidth: 50, restHeight: 130, gap: 14, arrowSize: 44 },
   md: { activeWidth: 560, activeHeight: 370, restWidth: 90, restHeight: 240, gap: 24, arrowSize: 52 },
-  lg: { activeWidth: 820, activeHeight: 540, restWidth: 130, restHeight: 350, gap: 36, arrowSize: 60 },
+  lg: { activeWidth: 820, activeHeight: 461, restWidth: 130, restHeight: 350, gap: 36, arrowSize: 60 },
 };
 
 export default function ProjectsShowcase() {
@@ -29,7 +29,11 @@ export default function ProjectsShowcase() {
   const sizing = SIZES[bp];
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const images = projects.map((p) => ({ srcUrl: p.image, alt: p.title }));
+  const images = projects.map((p) => ({
+    srcUrl: p.poster ?? p.image,
+    alt: p.title,
+    video: p.video,
+}));
   const active = projects[activeIndex];
 
   return (
