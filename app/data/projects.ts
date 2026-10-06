@@ -21,7 +21,7 @@ export const projects: Project[] = [
     image: "/images/placeholder.webp",
     techstack: ["Next.js", "Supabase", "Cloudflare", "Tailwind CSS"],
     repoUrl: "https://github.com/websitecrl/ryuwanshoy",
-    video: "/videos/ryuwanshoy-captioned.mp4",
+    video: "/videos/ryuwanshoy-promo-v2.mp4",
     poster: "/images/placeholder.webp"
   },
   {
